@@ -1,1 +1,24 @@
-<html></html>
+<div class="container">
+<div class="jumbotron">
+    <div class="" >    
+        <h2>Add your Favorite Orchid</h2>  
+    </div> 
+        <form name="addOrchid" class=""
+            data-ng-submit="fnAdd()">
+            <input type="text" class="form-control"
+            placeholder="Title"
+            data-ng-model="Orchid.Title"
+            required>
+            <input type="text" class="form-control"
+            placeholder="Text"
+            data-ng-model="Orchid.Text"
+            required>
+            <select data-ng-model="Orchid.MainPicture"  title="Select a Picture" data-ng-options="Img for Img in Flowers" class="form-control"></select>
+            <input type="submit" class="btn btn-default  btn-lg"
+            value="Add"
+            data-ng-disabled="addOrchid.$invalid">
+            <span>{{fnShowMsg()}}</span>
+        </form>
+    <a href="#/">See All Flowers</a>
+</div>
+</div>
